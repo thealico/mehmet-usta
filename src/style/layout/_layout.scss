@@ -12,13 +12,14 @@
 
 
 html 								{ font: 300 14px 'Open Sans'; -webkit-text-size-adjust: 100%;  text-size-adjust: 100% }
-html,body 							{ min-height:100%; width:100% }
+html,body 							{ height:100%; width:100% }
 body::-webkit-scrollbar 			{ display: none}
 
 //body 								{ overflow-x: hidden ; transition: opacity .3s; opacity: 1 ; /*min-width:1024px; min-height:768px*/ }
 
-body 								{ overflow-x: hidden ; display:flex; flex-direction:column;min-height:100vh;  }
-body > main 						{ flex:1; z-index:2 }
+body 								{ overflow-x: hidden ;  }
+body > main 						{ height:100%;  z-index:2 }
+//min-height: fill-available; min-height: -webkit-fill-available;
 
 html.query 							{ pointer-events: none; background:url('img/load/spin.gif') no-repeat center center;
 	body							{ opacity: 0 }

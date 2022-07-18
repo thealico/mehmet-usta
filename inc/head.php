@@ -4,9 +4,19 @@
 	
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title><?php echo $set['title'] ?></title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		
+		<link rel="icon" href="{{theme_url('dist/img/app/ios/30.png')}}">
+		
+		<link rel="apple-touch-icon" sizes="76x76"   href="<?php path('img/app/76.png') ?>">
+		<link rel="apple-touch-icon" sizes="120x120" href="<?php path('img/app/120.png') ?>">
+		<link rel="apple-touch-icon" sizes="152x152" href="<?php path('img/app/152.png') ?>">
+	    
 		
 		<?php
 		/*
