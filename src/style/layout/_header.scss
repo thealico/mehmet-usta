@@ -1,0 +1,166 @@
+ 
+header 						{ background:white; display:flex; flex-direction:column; position:sticky; top:0; z-index:4;
+
+	hr  					{ background:$line-1; border:0; height:2px; width:100%; position:absolute; left:0; z-index:1; width:100%; bottom:0}
+	.path-tre 				{  @include kapla(0);  transition:.2s ;height:0vh;z-index:0; background:#3c5b77; opacity:.92  }
+
+	.us 					{ background:#333; color:white; height:38px; letter-spacing:.8px; font-size:normal 12px 'Ubuntu';   @include flex_yc();
+		
+		a 					{ color: white;  font-size:12px; }
+		
+		.lan 				{ 
+	 		> i 			{ margin-right:9px; top:2px; opacity:.9;}
+			em 				{ font-size:10px; opacity:.5; top:-1px; padding:0 10px; }
+		}
+
+		.irt 				{
+			i 				{ color: #cacaca; top: 3px;font-size: 13px;position: absolute; left: -21px }
+		}
+	}
+
+	
+	.tst 					{ background:#f1f1f1; z-index:2; border-radius:6px; width:36px; height:34px }
+	
+
+	.as 					{ flex:1; padding-top:20px; background:white; z-index:1; /*padding-bottom:18px; */
+		> .row 				{ width: 100%;}
+	}
+
+	.logo 					{ 
+
+		img 				{ max-width: 224px }
+	}
+
+	.case 					{ visibility:hidden; position: absolute; width: 920px; z-index:1;  right: -20px ; top: 36px; padding-top:4px;  
+		.in 				{ height: 370px;  background: white;border-radius:0 0 8px 8px;}
+
+		//&::before			{ background:rgba(0,0,0,.2);   position: fixed; width: 100%; height: calc( 100% - var(--app-head) ); top: var(--app-head); left: 0; z-index: -1; content: " " }
+
+		.sub-us 			{ border-bottom:1px solid #ddd; height:58px;
+			ol 				{ height:100% }
+			a 				{ height:100%; display:flex; align-items:center; font-weight:700;
+				i 			{ position:absolute; left:50%; font-size:13px; transform:translate(-50%, 0); bottom:1px; visibility:hidden }
+			}
+			li.on 			{
+				a 			{  color:$color-b; i {visibility:visible } }
+			}
+		}
+
+		.sub-as 			{ height: calc( 100% - 58px );
+			
+			.tab-con > .row { height:100% ;
+				> div 		{ height:100% ; border-left:1px solid #ddd; &:first-child { border-left:0 } }
+			}
+			.nav ol 		{ padding:8px }
+		}
+
+		.nav-as 			{
+			ol:not(.on) 	{ display:none}
+		}
+
+		.nav  				{ 
+			a 				{ display:block; padding:8px 8px; border-radius:6px; color:$color-a; font-weight:700;
+				&:hover 	{ background:#eee; }
+			}
+			li.on a 		{ background:#eee; }
+		}
+
+		.new 				{ padding:16px; 
+			h4 				{ font-size:21px; font-weight:400 }
+			figure 			{ background:#eee; border-radius:6px }
+			summary 		{ font-size:13px; text-align:justify; padding:0}
+		}
+	}
+
+	menu 					{ 
+		
+		> li 				{ position: static;
+			&:hover 		{
+				.case 		{ visibility: visible }
+			}
+		}
+
+		> li > span  		{ 
+			a 				{ font-size:16px; font-weight:400; padding-bottom:18px; display:block;
+				&:hover 	{ color:#FF8040; }
+			}
+			i 				{ font-size:12px; margin-left:5px; top:0px }
+		}
+	}
+
+
+	.frm 					{ width:190px;
+		.ft 				{ border: 1px solid #ddd; font:300 13px Ubuntu; padding-bottom:1px; color:#666;  border-radius: 6px; height: 38px }
+		.fe .fi  i.ss-gizmo { font-size:17px; top:0 }
+	}
+
+
+	
+
+}
+
+html.on-menu.ovrly-two main { filter:blur(2px) }
+
+
+@media #{$gl-sm}  			{
+
+	header 					{ height:70px;
+		
+		.as 				{ padding-top:0; }
+		.logo img 			{ width:185px}
+
+		.as .row,
+		.as .row > .sag 	{ position: static }
+
+		.win 				{ position:absolute; left:0; top:0;height:100vh; padding-top:75px; width:100%; text-align:center;
+			
+			/*
+			ul 				{ max-width:200px; height:100%;
+				li 			{ margin:0!important; border-bottom:1px solid rgba(255,255,255,.1);  &:last-child { border-bottom: 0}
+					a 		{ padding:18px 0; display:block; color:white; &:hover{ background:none }	}
+				}
+			}
+			*/
+
+		}
+
+		.win  					{ visibility: hidden ; opacity:0; transition:.2s; }
+		
+		&:not(.of) 			{
+
+			.win  			{ transition-delay:.3s }
+		}
+
+		&.on 				{
+			.path-tre 		{ height:100vh }
+			.win  			{ visibility: visible ; opacity:1;}
+			
+		}
+	
+ 
+		&.of 				{
+			.path-tre 		{ height:0vh }	
+			.win  			{ opacity:0;}
+		}
+
+	}
+}
+
+
+@media #{$gl-xs}  		{
+	
+	header 				{ height:64px;
+		.logo img 		{ width:160px}
+	}
+}
+
+
+
+// @media #{$gl-lg} { @import "@header/lg" }
+// @media #{$gl-md} { @import "@media/md"  } 
+// @media #{$gl-sm} { @import "@media/sm"  } 
+// @media #{$gl-xs} { @import "@media/xs"  }  
+// @media #{$gl-ms} { @import "@media/ms"  }    
+
+
+
