@@ -1,10 +1,10 @@
 @mixin makeHtmlKits($mod:false){
   	
-	.hidden#{$mod} 				{ display:none;  &.import { display:none!important 		}}
+	.hidden#{$mod} 			{ display:none;  &.import { display:none!important 		}}
 	
 	.hide#{$mod} 				{ display:none;  &.import { display:none!important 		}}
 	
-	.show#{$mod} 				{ display: block;
+	.shw#{$mod} 				{ display: block;
 		&.inline 				{ display: inline }
 		&.row,&.flex 			{ display: flex }
 	}
@@ -51,13 +51,13 @@
 	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
 	@ text align mods */
 
-	@if ( $mod == null ) 		{
+	
 
 		.txt#{$mod}-j 			{ text-align:justify }
 		.txt#{$mod}-c 			{ text-align:center  }
 		.txt#{$mod}-r			{ text-align:right 	 }
 		.txt#{$mod}-l 			{ text-align:left 	 }
-	}
+	
 
 
 
@@ -112,6 +112,7 @@
 	[style*="--mr#{$mod}"] 	{ margin-right:   var(--mr#{$mod}) }
 	[style*="--mt#{$mod}"] 	{ margin-top:     var(--mt#{$mod}) }
 	[style*="--mb#{$mod}"]  { margin-bottom:  var(--mb#{$mod}) }
+	[style*="--top#{$mod}"]  { top: var(--top#{$mod}) }
 
 
 	.scr-x#{$mod} 			{ overflow-x: scroll ; @include touchscroll();}

@@ -1,14 +1,66 @@
-footer 							{ background:#4c4a50; border-top:1px solid rgba(255,255,255,.4); color:white; font-size:13px; height:65px;
-	a 							{ color:white}
-	.tre 						{
-		li 						{ background: rgba(255,255,255,.15); border-radius:4px; width:32px; height:32px; @include flex_mc(); font-size:15px }
-		.face  					{ top:2px}
-		.twit  					{ top:1px}
-		.yutb  					{ top:2px}
+footer 					{ padding:80px 0; color:$color-01;
+	
+	.us 				{ padding: 0 0 3.5rem 0 ;
+		h4 				{ font-size:26px } 
+		p 				{ font-size:15px }
+		> div 			{ margin-bottom:3.2rem; 
+			&:last-child{ margin-bottom:0   }
+		}
+
+		.sag 			{ width:225px }
 	}
+
+	.one 				{
+		h4 				{ color:$color-01 }
+		
+		.sag 			{
+			ol 			{ gap:12px}
+			a 			{ font-size:45px; height:1em;  display:block;
+				i 		{ line-height:1.2; height:100%; display:block; }
+			}
+		}	
+	}
+
+	.two 				{
+		h4 				{ color:$color-02 }
+		.sag 			{ gap:15px;
+			i 			{ font-size:40px;}
+			span 		{ font-size:16px;  margin-left:1.2rem }
+		}
+	}
+
+	.tre 				{
+		.row  			{ gap:17px }
+		h4 				{ color:$color-03; }
+		i 				{ color: $color-03; font-size:65px;  line-height: 1.2;height: 1em; display:block }
+	}
+
+
+	.as 				{ border-top:1px solid #ededed; padding:1.3rem 0 0 0;
+		b 				{ font-size:9px }
+		p 				{ font-size:12px; text-align:justify; color:$color-04; letter-spacing:.3px; padding-top:1rem;  }
+		div 			{ gap:1rem;
+			a 			{ font-size:10.5px; top:1px }
+			h5 			{ font-size:16px ; font-weight:600}
+			s 			{ margin-right:5px; font-size:18px; top:1px}
+		}
+	}
+
 }
 
 
+
+
+@media #{$gl-xs} 			{
+	
+	footer 					{
+		.us .sag 			{ width:auto }
+		.two h4 			{ font-size:23px}
+		.tre i 				{ font-size:16px}
+		.as div 			{ gap:.3rem}
+	}
+	
+}  	
 
 /*
 @  responsive  */

@@ -179,6 +179,7 @@ img.iw, .iw img 					{ display:block; width:100% }
 
 
 [class*="visble"] 					{ display:none;  &.import { display:none!important }}
+[class*="shw"] 						{ display:none;  &.import { display:none!important }}
 
 
 

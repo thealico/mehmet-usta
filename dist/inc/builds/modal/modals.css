@@ -289,6 +289,11 @@ img.iw, .iw img {
   [class*="visble"].import {
     display: none !important; }
 
+[class*="shw"] {
+  display: none; }
+  [class*="shw"].import {
+    display: none !important; }
+
 .hidden-import {
   display: none !important; }
 
@@ -332,11 +337,11 @@ img.iw, .iw img {
   .hide.import {
     display: none !important; }
 
-.show {
+.shw {
   display: block; }
-  .show.inline {
+  .shw.inline {
     display: inline; }
-  .show.row, .show.flex {
+  .shw.row, .shw.flex {
     display: flex; }
 
 /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
@@ -424,6 +429,9 @@ img.iw, .iw img {
 
 [style*="--mb"] {
   margin-bottom: var(--mb); }
+
+[style*="--top"] {
+  top: var(--top); }
 
 .scr-x {
   overflow-x: scroll;
@@ -1138,17 +1146,29 @@ img.iw, .iw img {
     .hide-lg.import {
       display: none !important; }
 
-  .show-lg {
+  .shw-lg {
     display: block; }
-    .show-lg.inline {
+    .shw-lg.inline {
       display: inline; }
-    .show-lg.row, .show-lg.flex {
+    .shw-lg.row, .shw-lg.flex {
       display: flex; }
 
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ visible mods */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ text align mods */
+  .txt-lg-j {
+    text-align: justify; }
+
+  .txt-lg-c {
+    text-align: center; }
+
+  .txt-lg-r {
+    text-align: right; }
+
+  .txt-lg-l {
+    text-align: left; }
+
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ gc : grid col unset width size */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
@@ -1192,6 +1212,9 @@ img.iw, .iw img {
 
   [style*="--mb-lg"] {
     margin-bottom: var(--mb-lg); }
+
+  [style*="--top-lg"] {
+    top: var(--top-lg); }
 
   .scr-x-lg {
     overflow-x: scroll;
@@ -1929,17 +1952,29 @@ img.iw, .iw img {
     .hide-md.import {
       display: none !important; }
 
-  .show-md {
+  .shw-md {
     display: block; }
-    .show-md.inline {
+    .shw-md.inline {
       display: inline; }
-    .show-md.row, .show-md.flex {
+    .shw-md.row, .shw-md.flex {
       display: flex; }
 
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ visible mods */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ text align mods */
+  .txt-md-j {
+    text-align: justify; }
+
+  .txt-md-c {
+    text-align: center; }
+
+  .txt-md-r {
+    text-align: right; }
+
+  .txt-md-l {
+    text-align: left; }
+
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ gc : grid col unset width size */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
@@ -1983,6 +2018,9 @@ img.iw, .iw img {
 
   [style*="--mb-md"] {
     margin-bottom: var(--mb-md); }
+
+  [style*="--top-md"] {
+    top: var(--top-md); }
 
   .scr-x-md {
     overflow-x: scroll;
@@ -2720,17 +2758,29 @@ img.iw, .iw img {
     .hide-sm.import {
       display: none !important; }
 
-  .show-sm {
+  .shw-sm {
     display: block; }
-    .show-sm.inline {
+    .shw-sm.inline {
       display: inline; }
-    .show-sm.row, .show-sm.flex {
+    .shw-sm.row, .shw-sm.flex {
       display: flex; }
 
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ visible mods */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ text align mods */
+  .txt-sm-j {
+    text-align: justify; }
+
+  .txt-sm-c {
+    text-align: center; }
+
+  .txt-sm-r {
+    text-align: right; }
+
+  .txt-sm-l {
+    text-align: left; }
+
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ gc : grid col unset width size */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
@@ -2774,6 +2824,9 @@ img.iw, .iw img {
 
   [style*="--mb-sm"] {
     margin-bottom: var(--mb-sm); }
+
+  [style*="--top-sm"] {
+    top: var(--top-sm); }
 
   .scr-x-sm {
     overflow-x: scroll;
@@ -3500,7 +3553,7 @@ img.iw, .iw img {
   .px-100-sm {
     padding-left: 100px;
     padding-right: 100px; } }
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 37.5em) {
   .hidden-xs {
     display: none; }
     .hidden-xs.import {
@@ -3511,17 +3564,29 @@ img.iw, .iw img {
     .hide-xs.import {
       display: none !important; }
 
-  .show-xs {
+  .shw-xs {
     display: block; }
-    .show-xs.inline {
+    .shw-xs.inline {
       display: inline; }
-    .show-xs.row, .show-xs.flex {
+    .shw-xs.row, .shw-xs.flex {
       display: flex; }
 
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ visible mods */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ text align mods */
+  .txt-xs-j {
+    text-align: justify; }
+
+  .txt-xs-c {
+    text-align: center; }
+
+  .txt-xs-r {
+    text-align: right; }
+
+  .txt-xs-l {
+    text-align: left; }
+
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
   @ gc : grid col unset width size */
   /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
@@ -3565,6 +3630,9 @@ img.iw, .iw img {
 
   [style*="--mb-xs"] {
     margin-bottom: var(--mb-xs); }
+
+  [style*="--top-xs"] {
+    top: var(--top-xs); }
 
   .scr-x-xs {
     overflow-x: scroll;
@@ -6196,7 +6264,7 @@ html.on-modal body {
 html[mod='4'] .modal.f-urun .u-kunye .col-7 label {
   width: 86px; }
 
-@media screen and (min-width: 35.5em) {
+@media screen and (min-width: 37.5em) {
   .modal.f-urun .mob, .modal.f-urun .m {
     display: none; } }
 @media screen and (max-width: 920px) {
@@ -6290,7 +6358,7 @@ html[mod='4'] .modal.f-urun .u-kunye .col-7 label {
     top: 0px; }
     .modal.f-urun .u-title div > span i {
       font-size: 9px; } }
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 37.5em) {
   .modal.f-urun {
     margin-bottom: 0; }
     .modal.f-urun .web, .modal.f-urun .w {

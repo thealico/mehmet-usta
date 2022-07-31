@@ -33,8 +33,15 @@ $color-7	: #1c6dd1;	 	// 	blue    : links
 $color-2	: #f1371e;		//	orange 	: default active on class	
 $color-3	: #f75555;		//	orange  : balon back
 $color-6	: #555555;	
-
 $color-9	: #FF8040;
+
+
+$color-01 	: #707070;  // gri
+$color-02 	: #5bae81;  // ysl
+$color-03 	: #040404;  // syh
+$color-04 	: #888888;  	// acik gri
+
+
 
 $color-a	: #3f6b92;	
 $color-b	: #ef8842;	
@@ -62,16 +69,17 @@ $line-1 	: linear-gradient(90deg, #ffca68, #bf6527);
 $gl-con       	 	: "screen and (max-width: #{$case-max+10} )";
 $gl-con-min    	 	: "screen and (min-width: #{$case-max+10} )";
  
-$gl-ms       	 	: "screen and (max-width: 26em)"; 		
-$gl-xs        		: "screen and (max-width: 35.5em)"; 
+ 
+$gl-ms       	 	: "screen and (max-width: 31.25em)"; 		
+$gl-xs        		: "screen and (max-width: 37.5em)"; 
 $gl-sm        		: "screen and (max-width: 54em)";  	
 $gl-md         		: "screen and (max-width: 64em)";   
 $gl-lg         		: "screen and (max-width: 80em)";   	
 $gl-xl         		: "screen and (max-width: 87.5em)";   	
 $gl-xxl        		: "screen and (max-width: 100em)";   	
 
-$gl-ms-min       	: "screen and (min-width: 26em)"; 	
-$gl-xs-min        	: "screen and (min-width: 35.5em)"; 	
+$gl-ms-min       	: "screen and (min-width: 31.25em)"; 	
+$gl-xs-min        	: "screen and (min-width: 37.5em)"; 	
 $gl-sm-min        	: "screen and (min-width: 54em)";  	 	
 $gl-md-min         	: "screen and (min-width: 64em)";   	
 $gl-lg-min      	: "screen and (min-width: 80em)";   	

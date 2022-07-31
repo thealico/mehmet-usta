@@ -1437,7 +1437,7 @@
 
   [class*="row"] > .order-sm-20 {
     order: 20; } }
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 37.5em) {
   .row-xs-1 > [class*="col"] {
     flex-basis: calc( 100% - ( var(--cg) * 0 / 1 ) );
     max-width: calc( 100% - ( var(--cg) * 0 / 1 ) ); }
@@ -1801,7 +1801,7 @@
 
   [class*="row"] > .order-xs-20 {
     order: 20; } }
-@media screen and (max-width: 26em) {
+@media screen and (max-width: 31.25em) {
   .row-ms-1 > [class*="col"] {
     flex-basis: calc( 100% - ( var(--cg) * 0 / 1 ) );
     max-width: calc( 100% - ( var(--cg) * 0 / 1 ) ); }

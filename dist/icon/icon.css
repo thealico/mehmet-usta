@@ -3183,6 +3183,12 @@ i.ss-social-circle, .ss-icon.ss-social-circle, [class^="ss-"].ss-social-circle:b
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-on-wifi:before {
+  content: "\e952"; }
+
+.icon-of-wifi:before {
+  content: "\e951"; }
+
 .icon-cek-b:before {
   content: "\e941"; }
 
@@ -3454,3 +3460,15 @@ i.ss-social-circle, .ss-icon.ss-social-circle, [class^="ss-"].ss-social-circle:b
 
 .icon-set-d:before {
   content: "\e91d"; }
+
+.icon-link:before {
+  content: "\e953"; }
+
+.icon-mail:before {
+  content: "\e954"; }
+
+.icon-copy:before {
+  content: "\e955"; }
+
+.icon-wtsp:before {
+  content: "\e956"; }
