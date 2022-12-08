@@ -18,7 +18,7 @@ $data=[
 				'body' => ""
 			],
 			"price" => "40",
-			"video" => false,
+			"video" => "https://www.youtube.com/watch?v=CKnGXZxK7zs",
 		],
 
 		2=>[
@@ -176,7 +176,8 @@ $data=[
 				'body'=>"",
 				'sum' =>"",
 			],
-			"price" => "30"
+			"price" => "30",
+			"video" => false
 		],
 
 		2=>[
@@ -195,7 +196,8 @@ $data=[
 				'body'=>"",
 				'sum' =>"",
 			],
-			"price" => "30"
+			"price" => "30",
+			"video" => false
 		],
 		3=>[
 			"tr" => [
@@ -213,7 +215,8 @@ $data=[
 				'body'=>"",
 				'sum' =>"",
 			],
-			"price" => "30"
+			"price" => "30",
+			"video" => false
 		],
 		4=>[
 			"tr" => [
@@ -231,7 +234,8 @@ $data=[
 				'body'=>"",
 				'sum' =>"",
 			],
-			"price" => "30"
+			"price" => "30",
+			"video" => false
 		],
 		5=>[
 			"tr" => [
@@ -249,7 +253,8 @@ $data=[
 				'body'=>"",
 				'sum' =>"",
 			],
-			"price" => "30"
+			"price" => "30",
+			"video" => false
 		],
 		6=>[
 			"tr" => [
@@ -267,7 +272,8 @@ $data=[
 				'body'=>"",
 				'sum' =>"",
 			],
-			"price" => "30"
+			"price" => "30",
+			"video" => false
 		]
 
 	],

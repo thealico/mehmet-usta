@@ -26,18 +26,26 @@
 				<li class="row direct-y-xs middle-xs">
 					<div class="one">
 						<figure><img src="<?php path("img/urun/k-$k.jpg") ?>" /></figure>
-						<a href="#">
-							<i class="ss-social ss-youtube"></i><span><?php lan(13) ?><br> <?php lan(14) ?></span>
-						</a>
-					</div>
-					<div class="col two txt-xs-c">
+						
+						<?php if($v['video']) : ?>
 
+							<a href="<?php echo $v['video'] ?>" target="_blank">
+								<i class="ss-social ss-youtube"></i><span><?php lan(13) ?><br> <?php lan(14) ?></span>
+							</a>
+
+						<?php endif ?>
+
+					</div>
+					
+					<div class="col two txt-xs-c">
 						<h4><?php echo $v[$lan]['name'] ?></h4>
 						<p><?php echo $v[$lan]['body']  ?></p>
 					</div>
+
 					<div class="tre">
 						<span class="price"><?php echo $v['price'] ?><s>₺</s></span>
 					</div>
+
 				</li>
 				<?php endforeach ?>
 			</ul>
@@ -78,9 +86,12 @@
 					<div class="one">
 						
 						<figure><img src="<?php path("img/urun/t-$k.jpg") ?>" /></figure>
-						<a href="#">
-							<i class="ss-social ss-youtube"></i><span><?php lan(13) ?><br> <?php lan(14) ?></span>
-						</a>
+					
+						<?php if($v['video']) : ?>
+							<a href="<?php echo $v['video'] ?>" target="_blank">
+								<i class="ss-social ss-youtube"></i><span><?php lan(13) ?><br> <?php lan(14) ?></span>
+							</a>
+						<?php endif ?>
 						
 					</div>
 					<div class="col two txt-xs-c">
