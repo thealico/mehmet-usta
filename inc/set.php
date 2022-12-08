@@ -1,21 +1,29 @@
 <?php 
 
-	//$url		=	'http://127.0.0.1/yeniben/';
-	//$url		=	'http://localhost/';
-	//$url		=	'https://akman.me/octopus/';
-	//$url		=	'http://localhost/ey/octopus/';
-	//$url		=	'http://localhost.loc/';
 	$url		=	'/';
-	//$url		=	'http://alico.me/atolye/project/zerobuffer/yeniben/';
+
+	$lan = str_replace('/','',$_SERVER['REQUEST_URI']);
+	$lan = in_array($lan, ['tr','en','ar']) ? $lan : 'tr';
+
+	$langs = $langs[$lan];
+
+
+
+	function _e($e,$d=0){
+		
+		echo '<pre>';
+			print_r($e);
+		echo '<pre>';	
+
+		if($d) die();
+	}
 	
-		
-	function path($file='',$don=false)
-	{
+
+	
+	function path($file='',$don=false){
+
 		global $url ;
-
-
 		
-		//$url		=	'http://127.0.0.1/htm/zerobuffer/yeniben/';
 		if( isset($don) && $don==true) 
 		{
 			$a= $url.'dist/'.$file;
@@ -27,6 +35,24 @@
 			echo $url.'dist/'.$file;
 		}
 	}
+	
+
+
+	function lan($key,$out=false){
+		
+		global $langs;
+		
+
+		$str = $langs[$key] ?? 'err:'.$key;
+
+		if($out) return $str;
+
+		
+		echo $str;
+	}
+
+
+
 	
 	
 	

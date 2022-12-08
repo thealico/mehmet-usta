@@ -1,7 +1,7 @@
 <?php 
-	
+
 	$set = array(
-		'title' => ' Menü - Kebapçı Mehmet Usta',
+		'title' => 2,
 		'class' => 'view',
 		'cat'   => '',
 		'sub' 	=> '',
@@ -11,32 +11,35 @@
 ?>
 
 <?php include('inc/header.php') ?>
-
 	
 	<section rel="kebap" class="f1 max">
+
 		<div class="head pad txt-xs-c">
-			<h2>Kebaplar</h2>
-			<summary>Meşhur Kebaplarımızı senin için ocağa atıyoruz</summary>
+			<h2><?php lan(19) ?></h2>
+			<summary><?php lan(20) ?></summary>
 		</div>
+
 		<div class="body">
 			<ul>
-				<?php for ($i=1; $i < 5 ; $i++) : ?>
+				<?php foreach ($data['kebab'] as $k => $v):?>
+				
 				<li class="row direct-y-xs middle-xs">
 					<div class="one">
-						<figure><img src="<?php path('img/urun/01.jpg') ?>" /></figure>
+						<figure><img src="<?php path("img/urun/k-$k.jpg") ?>" /></figure>
 						<a href="#">
-							<i class="ss-social ss-youtube"></i><span>Nasıl Hazırlanıyor<br> Hemen İzle</span>
+							<i class="ss-social ss-youtube"></i><span><?php lan(13) ?><br> <?php lan(14) ?></span>
 						</a>
 					</div>
 					<div class="col two txt-xs-c">
-						<h4>Urfa Kebap</h4>
-						<p>Mehmet Usta'nın incisi. Sade yağ ve özel zulh ile hazırladığımız enfes urfa kebabı, yanında mezeler ve lavaş'ı' ile servis edilir.</p>
+
+						<h4><?php echo $v[$lan]['name'] ?></h4>
+						<p><?php echo $v[$lan]['body']  ?></p>
 					</div>
 					<div class="tre">
-						<span class="price">60<s>₺</s></span>
+						<span class="price"><?php echo $v['price'] ?><s>₺</s></span>
 					</div>
 				</li>
-				<?php endfor ?>
+				<?php endforeach ?>
 			</ul>
 		</div>
 	</section>
@@ -47,8 +50,8 @@
 		<div class="max h">
 			<div class="row middle between h direct-y-xs">
 				<div class="col">
-					<h3>Künefe ne dersin ?</h3>
-					<p>Kebap sonrası nefis bir küneye<br class="shw-xs"> ne dersin ?</p>
+					<h3><?php lan(15) ?></h3>
+					<p><?php lan(16) ?></p>
 				</div>
 				<div>
 					<figure><img src="<?php path('img/cover-tat.png') ?>" /></figure>
@@ -63,31 +66,33 @@
 	<section rel="tatli" class="f1 max">
 
 		<div class="head pad  txt-xs-c">
-			<h2>Tatlılar</h2>
-			<summary>Kebapçı Mehmet Usta'da künefe keyfi, kebap sonrası en lezzetli künefelerimiz seni bekliyor</summary>
+			<h2><?php lan(21) ?></h2>
+			<summary><?php lan(22) ?></summary>
 		</div>
 		<div class="body">
 			<ul>
-				<?php for ($i=1; $i < 5 ; $i++) : ?>
+				
+				<?php foreach ( $data['tatli'] as $k => $v) : ?>
+				
 				<li class="row direct-y-xs middle-xs">
 					<div class="one">
 						
-						<figure><img src="<?php path('img/urun/01.jpg') ?>" /></figure>
+						<figure><img src="<?php path("img/urun/t-$k.jpg") ?>" /></figure>
 						<a href="#">
-							<i class="ss-social ss-youtube"></i><span>Nasıl Hazırlanıyor<br> Hemen İzle</span>
+							<i class="ss-social ss-youtube"></i><span><?php lan(13) ?><br> <?php lan(14) ?></span>
 						</a>
 						
 					</div>
 					<div class="col two txt-xs-c">
-						<h5>Künefe</h5>
-						<h4>Küçük</h4>
-						<p>Kebap sonrası kendie bir güzellik yap. Tek kişilik künefemiz ile lezzetini katla</p>
+						<h5><?php  echo $v[$lan]['sum'] ?></h5>
+						<h4><?php  echo $v[$lan]['name'] ?></h4>
+						<p><?php   echo $v[$lan]['body']  ?></p>
 					</div>
 					<div class="tre">
-						<span class="price">30<s>₺</s></span>
+						<span class="price"><?php echo $v['price'] ?><s>₺</s></span>
 					</div>
 				</li>
-				<?php endfor ?>
+				<?php endforeach ?>
 			</ul>
 		</div>
 
@@ -98,8 +103,8 @@
 		<div class="max h">
 			<div class="row middle between h direct-y-xs">
 				<div class="col">
-					<h3>En iyi restoran</h3>
-					<p>Kebap Mehemt Ustanın dünyanın en ünlü turistlik rehber sitesi TripAdvisor Marmara bölgesinde birinci sırada olduğunu biliyor muydun ?</p>
+					<h3><?php lan(17) ?></h3>
+					<p><?php lan(18) ?></p>
 				</div>
 				<div>
 					<figure><img src="<?php path('img/cover-trp.png') ?>" /></figure>
@@ -114,7 +119,7 @@
 		
 		<div class="head">
 			<div class="max h row ns middle center-xs pad">
-				<h2>İçecekler</h2>
+				<h2><?php lan(23) ?></h2>
 			</div>
 		</div>
 
@@ -122,20 +127,28 @@
 			
 			<ul>
 				
-				<li class="one">
+				<?php $i =1;foreach ( $data['icecek'] as $k => $v) : ?>
+				
+
+				<li class="f-<?php echo $i ?>">
 					
 					<div class="max h pad">
 						
 						<div class="row h middle direct-y-xs middle-xs center-xs">
 							<div class="col-9 tag">
 								<div class="w-85 w-100-xs">
-									<h3>Asitli İçecekler</h3>
-									<p>Tüm asitli içecekler için geçerlidir</p>
+									<h3><?php echo $v[$lan]['name'] ?></h3>
+									<p><?php echo $v[$lan]['body'] ?></p>
 								</div>
 							</div>
 							<div class="col-3 fyt">
 								<ol class="prc flex">
-									<li><span class="price">10<s>₺</s></span></li>
+									<?php if( count($v['price']) > 1 ): ?>
+										<li><span class="price"><?php echo $v['price'][0] ?? '' ?><s>₺</s></span><sub><?php lan(24) ?></sub></li>
+										<li><span class="price"><?php echo $v['price'][1] ?? '' ?><s>₺</s></span><sub><?php lan(25) ?></sub></li>
+									<?php else :?>
+										<li><span class="price"><?php echo $v['price'][0] ?? '' ?><s>₺</s></span></li>
+									<?php endif ?>
 								</ol>
 							</div>
 						</div>
@@ -144,71 +157,15 @@
 
 				</li>
 
-				<li class="two">
+				<?php $i++; endforeach ?>
 
-					<div class="max h pad">
-						<div class="row h middle direct-y-xs middle-xs center-xs">
-							<div class="col-9 tag">
-								<div class="w-85 w-100-xs">
-									<h3>Ayran</h3>
-									<p>Est quidam mnesarchum ex, in vidit fuisset adipiscing nam. Eam illud porro principes ea. Stet assum aliquid ei mea</p>
-								</div>
-							</div>
-							<div class="col-3 fyt">
-								<ol class="prc flex">
-									<li><span class="price">20<s>₺</s></span><sub>Küçük Boy</sub></li>
-									<li><span class="price">25<s>₺</s></span><sub>Büyük Boy</sub></li>
-								</ol>
-							</div>
-						</div>
-					</div>
-
-				</li>
-
-				<li class="tre">
-
-					<div class="max h pad">
-						<div class="row h middle direct-y-xs middle-xs center-xs">
-							<div class="col-9 tag">
-								<div class="w-85 w-100-xs">
-									<h3>Şalgam</h3>
-									<p>Est quidam mnesarchum ex, in vidit fuisset adipiscing nam. Eam illud porro principes ea. Stet assum aliquid ei mea </p>
-								</div>
-							</div>
-							<div class="col-3 fyt">
-								<ol class="prc flex">
-									<li><span class="price">20<s>₺</s></span><sub>Küçük Boy</sub></li>
-									<li><span class="price">25<s>₺</s></span><sub>Büyük Boy</sub></li>
-								</ol>
-							</div>
-						</div>
-					</div>
-
-				</li>
-
-				<li class="for">
-
-					<div class="max h pad">
-						<div class="row h middle direct-y-xs middle-xs center-xs">
-							<div class="col-9 tag">
-								<div class="w-85 w-100-xs">
-									<h3>Su</h3>
-									<p>Est quidam mnesarchum ex, in vidit fuisset adipiscing nam.</p>
-								</div>
-							</div>
-							<div class="col-3 fyt">
-								<ol class="prc flex">
-									<li><span class="price">3<s>₺</s></span></li>
-								</ol>
-							</div>
-						</div>
-					</div>
-
-				</li>
+			
 				
 			</ul>
 		</div>
 	</section>
+
+
 
 	<footer>
 		<div class="us max pad txt-xs-c">
@@ -216,8 +173,8 @@
 			<div class="one row ns between direct-y-xs center-xs middle-xs">
 				
 				<div class="col-6 col-xs-9"  style="--pr: 3% ; --pr-xs:0">
-					<h4>Bizi takip edin</h4>
-					<p style="--pt:5px">Kebapçı Mehmet Ustayı sosyal medya üzerinden takip edin</p>
+					<h4><?php lan(3) ?></h4>
+					<p style="--pt:5px"><?php lan(4) ?></p>
 				</div>
 				
 				<div class="sag" style="--pt:15px; --pt-xs:30px">
@@ -234,13 +191,13 @@
 
 			<div class="two row ns between direct-y-xs center-xs middle-xs">
 				<div class="col-6 col-xs-9" style="--pr: 3%; --pr-xs:0">
-					<h4>Yöneticiye Mesaj Gönderin</h4>
-					<p style="--pt:15px">Tüm soru ve görüşkleriniz için yöneticiye anlık mesaj gönderin</p>
+					<h4><?php lan(5) ?></h4>
+					<p style="--pt:15px"><?php lan(6) ?></p>
 				</div>
 				<div class="sag" style="--pt:5px; --pt:25px">
 					<a href="#" class="flex yc">
 						<i class="icon-wtsp"></i>
-						<span class="hide-xs">Mesajlarınız yöneticiye anlık olarak iletilir</span>
+						<span class="hide-xs"><?php lan(9) ?></span>
 					</a>
 				</div>
 			</div>
@@ -250,8 +207,8 @@
 				<div class="row ns middle w-75 w-100-xs direct-y-xs ">
 					<div class="order-xs-2"><i class="ss-pika ss-info" style="--top:9px; --top-xs:0"></i></div>
 					<div class="col">
-						<h4 style="--pb-xs:10px">Başka Şubemiz Yoktur</h4>
-						<p>Kebaçı Mehmet Usta olarak başka şubemiz yoktur. Kebapçı Mehmet Usta ve Logomuz tescillidir. İsim benzerliğinden dolayı şubemiz olduğunu düşünen misafirlerimizin bilgisine sunarız.</p>
+						<h4 style="--pb-xs:10px"><?php lan(7) ?></h4>
+						<p><?php lan(8) ?></p>
 					</div>
 				</div>
 			</div>
@@ -259,20 +216,12 @@
 		</div>
 		<div class="as">
 			<div class="in max pad txt-xs-c">
-				<div class="row middle center-xs ns direct-y-xs"><h5><s>©</s>2022 Kebapçı Mehmet Usta</h5><a href="#">www.kebapcimehmetusta.com</a></div>
-				<b>Sevis Bilgisi</b>
-				<p>Menüde yer alan görseller temsilidir, sunumda farklılık gösterebilir. Servis süresi gün saat ve restroran yoğunluğuna göre farklılık gösterebilir. Bu menüde yer alan ürünler paket servisi kapsamamaktadır, sadece restaurant içinde geçerlidir. Porsiyon ve gramaj bilgisi için lütfen siparişiniz esnasında yetkili personele sorunuz. Servisimiz lavaş üzerinde gelmektedir. Cam bardak isteyen müşterilerimiz sipariş esnasında belirtmesi gerekmektedir. </p>
+				<div class="row middle center-xs ns direct-y-xs"><h5><s>©</s><?php lan(10) ?></h5><a href="#">www.kebapcimehmetusta.com</a></div>
+				<b><?php lan(11) ?></b>
+				<p><?php lan(12) ?></p>
 			</div>
 		</div>
 	</footer>
-
-	<section></section>
-
-
-
-
-
-
 
 
 <?php include('inc/footer.php') ?>

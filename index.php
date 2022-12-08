@@ -1,7 +1,7 @@
 <?php 
 	
 	$set = array(
-		'title' => 'Kebapçı Mehmet Usta',
+		'title' => 1,
 		'class' => 'home',
 		'cat'   => '',
 		'sub' 	=> '',
