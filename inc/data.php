@@ -10,11 +10,11 @@ $data=[
 				'body' => "Mehmet Usta'nın incisi. Sade yağ ve özel zulh ile hazırladığımız enfes urfa kebabı, yanında mezeler ve lavaş'ı' ile servis edilir."
 			],
 			"en" => [
-				'name' =>"",
+				'name' =>"x",
 				'body' =>""
 			],
 			"ar" => [
-				'name' => "",
+				'name' => "c",
 				'body' => ""
 			],
 			"price" => "40",
@@ -23,8 +23,8 @@ $data=[
 
 		2=>[
 			"tr" => [
-				'name' => "",
-				'body' => ""
+				'name' => "2 tr baslık",
+				'body' => "2 tr body"
 			],
 			"en" => [
 				'name' => "",
@@ -326,7 +326,7 @@ $data=[
 				'name'=>"",
 				'body'=>"",
 			],
-			"price" => ["0","0"]
+			"price" => ["2","6"]
 		],
 		4=>[
 			"tr" => [
@@ -344,4 +344,5 @@ $data=[
 			"price" => ["0"]
 		]
 	]
+
 ];

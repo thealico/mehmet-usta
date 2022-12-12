@@ -1,11 +1,18 @@
 <?php 
 
-	$url		=	'/';
+	
+	$url		=	'/menu/test/';
 
-	$lan = str_replace('/','',$_SERVER['REQUEST_URI']);
+	//$lan = str_replace('/','',$_SERVER['REQUEST_URI']);
+
+	$lan = explode('/',$_SERVER['REQUEST_URI']);
+	$lan = $lan[count($lan)-1];
+
 	$lan = in_array($lan, ['tr','en','ar']) ? $lan : 'tr';
 
 	$langs = $langs[$lan];
+
+
 
 
 
@@ -17,7 +24,7 @@
 
 		if($d) die();
 	}
-	
+
 
 	
 	function path($file='',$don=false){

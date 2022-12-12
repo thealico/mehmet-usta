@@ -4,6 +4,15 @@ RewriteEngine On
 # RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
 # php_flag zlib.output_compression On
 
+
+# RewriteRule ^$ index.php [L,QSA]
+
+# RewriteRule ^tr$ view.php [L,QSA]
+# RewriteRule ^ar$ view.php [L,QSA]
+# RewriteRule ^en$ view.php [L,QSA]
+
+
+
 RewriteRule ^$ index.php [L,QSA]
 
 RewriteRule ^tr$ view.php [L,QSA]
